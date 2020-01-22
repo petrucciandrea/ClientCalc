@@ -198,30 +198,4 @@ public class ClientCalc {
         //String formattedSOAPResponse = formatXML(outputString);
         System.out.println(outputString);
     }
-    /*
-    private static String formatXML(String unformattedXml) throws ParserConfigurationException {
-	try {
-		Document document = parseXmlFile(unformattedXml);
-		TransformerFactory transformerFactory = TransformerFactory.newInstance();
-		transformerFactory.setAttribute("indent-number", 3);
-		Transformer transformer = transformerFactory.newTransformer();
-		transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-		DOMSource source = new DOMSource((Node) document);
-		StreamResult xmlOutput = new StreamResult(new StringWriter());
-		transformer.transform(source, xmlOutput);
-		return xmlOutput.getWriter().toString();
-	} catch (TransformerException e) {
-		throw new RuntimeException(e);
-	}
-    }
-    private static Document parseXmlFile(String in) throws ParserConfigurationException {
-        try {
-            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-            DocumentBuilder db = dbf.newDocumentBuilder();
-            InputSource is = new InputSource(new StringReader(in));
-            return db.parse(is);
-        } catch (ParserConfigurationException e) {
-            throw new RuntimeException(e);
-        }
-    }*/
 }
